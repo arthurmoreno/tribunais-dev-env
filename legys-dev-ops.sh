@@ -4,15 +4,16 @@
 ###    CONSTANTES    ###
 ########################
 
-source ./constants.sh
+ROUTINES_PATH="$(dirname $(realpath $0))"
+source $ROUTINES_PATH/constants.sh
 
 ######################
 ###    ROUTINES    ###
 ######################
 
-source ./routines/deploy.sh
-source ./routines/dev.sh
-source ./routines/test.sh
+source $ROUTINES_PATH/routines/deploy.sh
+source $ROUTINES_PATH/routines/dev.sh
+source $ROUTINES_PATH/routines/test.sh
 
 clean-tribunais () {
     echo "Limpando sessões do tmux."

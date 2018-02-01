@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./constants.sh
+source $ROUTINES_PATH/constants.sh
 
 ######################
 ###    HELPERS     ###

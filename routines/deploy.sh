@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source ./constants.sh
-source ./routines/utils.sh
+source $ROUTINES_PATH/constants.sh
+source $ROUTINES_PATH/routines/utils.sh
 
 ######################
 ###    ROUTINES    ###
