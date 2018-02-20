@@ -10,7 +10,7 @@ source $ROUTINES_PATH/routines/utils.sh
 deploy-prod() {
     tmux new -s ${WEBSHOOTER_SESSION} -d
     tmux send-keys -t ${WEBSHOOTER_SESSION} "cd ${WEBSHOOTER_DIR}" C-m
-    tmux send-keys -t ${WEBSHOOTER_SESSION} 'eval $(docker-machine env aws-webshooter)' C-m
+    tmux send-keys -t ${WEBSHOOTER_SESSION} 'eval $(docker-machine env webshooter-prod)' C-m
 
     tmux send-keys -t ${WEBSHOOTER_SESSION} 'export COMPOSE_FILE=docker-prod.yml' C-m
     tmux send-keys -t ${WEBSHOOTER_SESSION} 'docker rm -v $(docker ps -aq) -f' C-m
